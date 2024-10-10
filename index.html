@@ -10,13 +10,22 @@
   <meta name="keywords" content="global, template, html, sass, jquery">
   <meta name="author" content="Bucky Maler">
   <link rel="stylesheet" href="assets/css/main.css">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init({
+        publicKey: "IJtGZFZvAnOUxHe3J",
+      });
+    })();
+  </script>
   <style>
     .card {
       background-color: white;
       border-radius: 8px;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      padding: 20px;
+      padding: 10px;
       width: 300px;
+      margin-bottom: -40px !important;
     }
 
     .stars {
@@ -25,7 +34,8 @@
     }
 
     .title {
-      font-size: 18px;
+      font-size: 18px !important;
+      margin-bottom: -10px !important;
       font-weight: bold;
       margin: 10px 0;
       color: black;
@@ -42,64 +52,70 @@
         max-width: 220px;
         display: table-row !important;
       }
-      .abanner{
+
+      .abanner {
         margin-top: 20px !important;
       }
-      .micm{
+
+      .micm {
         height: 50vh !important;
         display: table !important;
         margin-top: 10px;
       }
-      .lewis{
+
+      .lewis {
         display: flex !important;
         margin-right: -60px !important;
         height: 350px !important;
         width: 350px !important;
       }
-      .m1le{
+
+      .m1le {
         margin-top: 120px !important;
         font-size: 35px !important;
       }
 
-      .mainer{
+      .mainer {
         margin-left: -100px !important;
       }
 
-      .tholder{
+      .tholder {
         display: grid !important;
       }
-      
-      .mcard{
+
+      .mcard {
         margin-top: 20px !important;
         display: table-cell !important;
         width: auto;
         height: 10px !important;
       }
 
-      #card1{
+      #card1 {
         margin-top: -260px !important;
       }
 
-      #card2{
+      #card2 {
         margin-top: 110px !important;
       }
 
-      #card3{
+      #card3 {
         display: none !important;
         margin-left: 1200px !important;
       }
 
-      #card4{
+      #card4 {
         display: none !important;
         margin-left: 1200px !important;
       }
 
-      .cbs{display: none;}
+      .cbs {
+        display: none;
+      }
     }
   </style>
 </head>
 
-<body>
+<body onload="init();">
 
   <div class="perspective effect-rotate-left">
     <div class="container">
@@ -110,7 +126,8 @@
             <a class="header--logo" href="#0">
               <img src="assets/img/logo.png" alt="Global" style="margin-top: 50px; width: 400px;">
             </a>
-            <button class="header--cta cta" onclick="window.location.replace('https://buy.stripe.com/4gwg1Xaiz5f85mU4go')">Sign Up</button>
+            <button class="header--cta cta"
+              onclick="window.location.replace('https://buy.stripe.com/4gwg1Xaiz5f85mU4go')">Sign Up</button>
             <div class="header--nav-toggle" style='margin-left: -200px !important;'>
               <span>s</span>
             </div>
@@ -129,7 +146,8 @@
               <div class="intro">
                 <div class="intro--banner">
                   <h1 class="m1le">Looking To<br>Transform Your Body<br>In 6 Weeks ?</h1>
-                  <button class="cta" onclick="window.location.replace('https://buy.stripe.com/4gwg1Xaiz5f85mU4go')">Sign Up
+                  <button class="cta"
+                    onclick="window.location.replace('https://buy.stripe.com/4gwg1Xaiz5f85mU4go')">Sign Up
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                       xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118"
                       style="enable-background:new 0 0 150 118;" xml:space="preserve">
@@ -207,56 +225,68 @@
 
                 <div class="mainer" style="margin-top: 10px !important;">
                   <div style="display: table; margin: 0; margin-left: 120px !important;" class="tholder">
-                    
-                    <div style="width: auto; height: 400px; display: inline-block !important; margin-left: 10px;" class="mcard" id="card1">
+
+                    <div style="width: auto; height: 400px; display: inline-block !important; margin-left: 10px;"
+                      class="mcard" id="card1">
                       <div class="card">
-                        <img src="./assets/img/t1.jpeg" style="width: 200px; height: 120px; margin-left: 50px !important;"/>  
+                        <img src="./assets/img/t1.jpeg"
+                          style="width: 200px; height: 120px; margin-left: 50px !important;" />
                         <div class="stars" aria-label="4 out of 5 stars" style="margin-left: 100px !important;">
                           ★★★★☆
                         </div>
                         <h2 class="title">Amazing Results!
                         </h2>
-                        <p class="review">With Lewis's focused training, I not only lost weight but also gained lean muscle, transforming my entire physique</p>
+                        <p class="review">With Lewis's focused training, I not only lost weight but also gained lean
+                          muscle, transforming my entire physique</p>
                       </div>
                     </div>
-  
-                    <div style="width: auto; height: 400px; display: inline-block !important; margin-left: 10px" class="mcard" id="card2">
+
+                    <div style="width: auto; height: 400px; display: inline-block !important; margin-left: 10px"
+                      class="mcard" id="card2">
                       <div class="card">
-                        <img src="./assets/img/t2.jpeg" style="width: 200px; height: 120px; margin-left: 50px !important;"/>  
+                        <img src="./assets/img/t2.jpeg"
+                          style="width: 200px; height: 120px; margin-left: 50px !important;" />
                         <div class="stars" aria-label="4 out of 5 stars" style="margin-left: 100px !important;">
                           ★★★★☆
                         </div>
-                        <h2 class="title" style="font-size: 25px !important;">Total Transformation!
+                        <h2 class="title">Total Transformation!
                         </h2>
-                        <p class="review">Lewis's tailored workouts helped me shed pounds quickly while building the muscle definition I’ve always wanted.</p>
+                        <p class="review">Lewis's tailored workouts helped me shed pounds quickly while building the
+                          muscle definition I’ve always wanted.</p>
                       </div>
                     </div>
-  
-                    <div style="width: auto; height: 400px; display: inline-block !important; margin-left: 10px" class="mcard" id="card3">
+
+                    <div style="width: auto; height: 400px; display: inline-block !important; margin-left: 10px"
+                      class="mcard" id="card3">
                       <div class="card">
-                        <img src="./assets/img/t4.jpeg" style="width: 200px; height: 120px; margin-left: 50px !important;"/>  
+                        <img src="./assets/img/t4.jpeg"
+                          style="width: 200px; height: 120px; margin-left: 50px !important;" />
                         <div class="stars" aria-label="4 out of 5 stars" style="margin-left: 100px !important;">
                           ★★★★☆
                         </div>
-                        <h2 class="title" style="font-size: 25px !important;">Incredible Progress!
+                        <h2 class="title">Incredible Progress!
                         </h2>
-                        <p class="review">Thanks to Lewis, my weight loss journey turned into a complete body transformation, improving both my strength and physique.</p>
+                        <p class="review">Thanks to Lewis, my weight loss journey turned into a complete body
+                          transformation, improving both my strength and physique.</p>
                       </div>
                     </div>
-  
-                    <div style="width: auto; height: 400px; display: inline-block !important; margin-left: 10px" class="mcard" id="card4">
+
+                    <div style="width: auto; height: 400px; display: inline-block !important; margin-left: 10px"
+                      class="mcard" id="card4">
                       <div class="card">
-                        <img src="./assets/img/t3.jpeg" style="width: 200px; height: 120px; margin-left: 50px !important;"/>  
+                        <img src="./assets/img/t3.jpeg"
+                          style="width: 200px; height: 120px; margin-left: 50px !important;" />
                         <div class="stars" aria-label="4 out of 5 stars" style="margin-left: 100px !important;">
                           ★★★★☆
                         </div>
-                        <h2 class="title" style="font-size: 24px !important;">Great Product!</h2>
-                        <p class="review">In just a few months, Lewis helped me lose weight, tone my muscles, and reshape my body like never before.</p>
+                        <h2 class="title">Great Product!</h2>
+                        <p class="review">In just a few months, Lewis helped me lose weight, tone my muscles, and
+                          reshape my body like never before.</p>
                       </div>
                     </div>
                   </div>
                 </div>
-                
+
               </div>
             </li>
             <li class="l-section section">
@@ -270,7 +300,8 @@
                           <img src="assets/img/work-victory.jpg" alt="Victory">
                         </div>
                         <p class="slider--item-title">£600 | 2885 AED<br>3 Months Online Coaching</p>
-                        <p class="slider--item-description">complete tailored diet and training program, weekly check-ins, whatsapp support, full access to exercise library with over 200 videos</p>
+                        <p class="slider--item-description">complete tailored diet and training program, weekly
+                          check-ins, whatsapp support, full access to exercise library with over 200 videos</p>
                       </a>
                     </li>
                     <li class="slider--item slider--item-center">
@@ -279,7 +310,8 @@
                           <img src="assets/img/work-metiew-smith.jpg" alt="Metiew and Smith">
                         </div>
                         <p class="slider--item-title">£180 | 900 AED <br>Training &amp; diet program</p>
-                        <p class="slider--item-description">complete tailored training & diet program, that suits the client's need &amp; goals, full access to exercise library with over 200 videos</p>
+                        <p class="slider--item-description">complete tailored training & diet program, that suits the
+                          client's need &amp; goals, full access to exercise library with over 200 videos</p>
                       </a>
                     </li>
                     <li class="slider--item slider--item-right">
@@ -288,7 +320,9 @@
                           <img src="assets/img/work-alex-nowak.jpg" alt="Alex Nowak">
                         </div>
                         <p class="slider--item-title">£299 | 1500 AED <br>6 Week transformation course</p>
-                        <p class="slider--item-description">In this course, you will learn everything you need to know about building muscles and losing body fat, including the tools and systems to build and maintain an amazing physique for longevatiy</p>
+                        <p class="slider--item-description">In this course, you will learn everything you need to know
+                          about building muscles and losing body fat, including the tools and systems to build and
+                          maintain an amazing physique for longevatiy</p>
                       </a>
                     </li>
                   </ul>
@@ -318,40 +352,35 @@
             </li>
             <li class="l-section section">
               <div class="hire">
-                <div style="margin-bottom: 10px;">
-                  <div style="margin: auto; width: auto; padding: 10px;">
-                    <a href="mailto:ouremail@gmail.com"
-                      style="background-color: blue; margin-left: 10px; margin-right: 10px; color: white; padding: 10px;">summerfit.enquiries@gmail.com</a>
-                    <a href="https://wa.me/+447546187476"
-                      style="background-color: blue; margin-left: 10px; margin-right: 10px; color: white; padding: 10px;">+44
-                      754 618 7476</a>
-                  </div>
-                  <div style="margin: auto; width: auto; padding: 10px;">
-                    <a href="http://instagram.com/_u/summers.93_"
-                      style="background-color: blue; margin-left: 10px; margin-right: 10px; color: white; padding: 10px;">Instagram
+                <div style="margin-bottom: 30px; display: table-row;">
+                  <div style="display: flex; justify-items: center; justify-content: center; margin-bottom: 8px;">
+                    <a href="https://api.whatsapp.com/send/?phone=%2B447546187476&text&type=phone_number&app_absent=0"
+                      style="padding: 15px 20px 15px 20px; text-decoration: none; color: white; background-color: #25D366; border-radius: 10px; margin-left: 10px; margin-right: 10px;">WhatsApp</a>
+                    <a href="https://www.instagram.com/summers.93_/"
+                      style="padding: 15px 20px 15px 20px; text-decoration: none; color: white; background-color: #E1306C; border-radius: 10px; margin-left: 10px; margin-right: 10px;">Instagram
                       (Personal)</a>
-                    <a href="http://instagram.com/_u/summerfitdirect"
-                      style="background-color: blue; margin-left: 10px; margin-right: 10px; color: white; padding: 10px;">Instagram
+                    <a href="https://www.instagram.com/summerfitdirect/"
+                      style="padding: 15px 20px 15px 20px; text-decoration: none; color: white; background-color: #FCAF45; border-radius: 10px; margin-left: 10px; margin-right: 10px;">Instagram
                       (Business)</a>
-
                   </div>
                 </div>
                 <h2>Download Free E-Books</h2>
-                <!-- checkout formspree.io for easy form setup -->
                 <form class="work-request">
                   <div class="work-request--information">
                     <div class="information-name">
-                      <input id="name" type="text" spellcheck="false">
+                      <input id="userName" type="text" spellcheck="false">
                       <label for="name">Name</label>
                     </div>
                     <div class="information-email">
-                      <input id="email" type="email" spellcheck="false">
+                      <input id="userEmail" type="email" spellcheck="false">
                       <label for="email">Email</label>
                     </div>
                   </div>
-                  <input type="submit" value="Send Request">
                 </form>
+                <button id="btnSend" style="width: 200px; height: 50px; background-color: blue; border: none; text-align: center; padding: 10px;">Download Free E-Book</button>
+
               </div>
+              
             </li>
           </ul>
         </div>
@@ -369,6 +398,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-2.2.4.min.js"><\/script>')</script>
   <script src="assets/js/functions-min.js"></script>
+  <script src="./mailer.js" type="text/javascript"/>
 </body>
 
 </html>
