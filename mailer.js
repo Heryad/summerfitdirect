@@ -8,7 +8,7 @@ function init(){
     btnSend = document.getElementById('btnSend');
 
     btnSend.onclick = function() {
-        emailjs.send("service_xa1fgk9","template_nypvj9s",{
+        emailjs.send("service_96rzxm8","template_86mbi5k",{
             from_name: userName.value,
             email_id: userEmail.value,
         });
